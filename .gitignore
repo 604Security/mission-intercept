@@ -1,0 +1,20 @@
+# virtualenv — recreate with: python3 -m venv .venv && .venv/bin/pip install rich pynput
+.venv/
+
+# python
+__pycache__/
+*.py[cod]
+
+# captured audio — never publish intercepts
+recordings/*
+!recordings/.gitkeep
+*.wav
+
+# local claude permissions + scratch notes
+.claude/settings.local.json
+how to cload
+
+# editor
+*.swp
+*~
+.DS_Store

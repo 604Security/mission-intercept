@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# SIA Mission Intercept launcher — runs the app from its project virtualenv.
+cd "$(dirname "$(readlink -f "$0")")" || exit 1
+if [ ! -x .venv/bin/python ]; then
+    echo "[!] .venv not found. Create it:" >&2
+    echo "    python3 -m venv .venv && .venv/bin/pip install rich pynput" >&2
+    exit 1
+fi
+exec .venv/bin/python mission_intercept.py "$@"
